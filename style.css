@@ -6,6 +6,23 @@
     box-sizing: border-box;
 }
 
+@keyframes novelsAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    100% {
+        transform: scaleX(2.1);
+        transform-origin: left;
+        z-index: 2;
+    }
+}
+
 body{
     width: 100%;
     min-height: 100dvh;
@@ -70,6 +87,25 @@ main {
                 flex-direction: column;
                 background: darkgray;
                 flex: 1;
+                position: relative;
+
+                a {
+                    .lamina {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: transparent;
+                        z-index: 2;
+                        transition: background-color 0.3s ease;
+                    }
+
+                    .lamina:hover {
+                        background-color: rgba(0, 0, 0, 0.5);
+                        cursor: pointer;
+                    }
+                }
 
                 .portada {
                     width: 100%;
@@ -84,22 +120,17 @@ main {
 
                 .titulo {
                     text-transform: initial;
-                    background-color: darkblue;
                     width: 100%;
                     height: 10%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-
-                    p {
-                        background-color: yellow;
-                    }
                 }
             }
 
             .novels:hover {
-                background-color: black;
+                animation: novelsAnimation 1.5s forwards;
             }
         }
     }
