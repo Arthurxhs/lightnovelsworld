@@ -23,6 +23,39 @@
     }
 }
 
+@keyframes parteIzquierda {
+    0% {
+        width: 100%;
+        height: 100%;
+    }
+
+    50% {
+        width: 100%;
+        height: 100%;
+    }
+
+    100% {
+        width: 30%;
+        height: 100%;
+    }
+}
+/*no se activa ya que no aparece entonces como jsjssj xd no sirve con hover*/
+@keyframes parteDerecha {
+    0% {
+        display: none;
+    }
+
+    50% {
+        display: none;
+    }
+
+    100% {
+        display: block;
+        width: 70%;
+        height: 100%;
+    }
+}
+
 body{
     width: 100%;
     min-height: 100dvh;
@@ -66,90 +99,118 @@ main {
     align-items: center;
     gap: 1rem;
     height: auto;
+    position: relative;
 
     section {
         display: flex;
         flex-direction: column;
         width: 70%;
-        height: 70dvh;
-        gap: 0.5rem;
+        min-height: 70dvh;
+        height: auto;
+        justify-content: space-around;
         background-color: #534c4c;
 
-        .contenedorFilasDeNovelas {
-            display: flex;
-            flex-direction: column;
-            height: 90%;
-            width: 100%;
-            gap: 1rem;
-            background-color: white;
-        }
-
-        .novels-container {
+        .filas-novelas {
             display: flex;
             flex-direction: row;
+            align-items: center;
             width: 100%;
-            height: 50%;
+            height: 45%;
+            background-color: red;
             gap: 1rem;
 
-            /*contenedor de la novela como tal*/
             .novels {
-                background: darkgray;
                 flex: 1;
+                display: flex;
+                flex-direction: row;
+                background-color: blue;
+                height: 100%;
+                cursor: pointer;
 
-                /*lo que agrupa tanto el titulo como la portada*/
-                .contenido {
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
+                .parteIzquierda {
                     display: flex;
                     flex-direction: column;
+                    width: 100%;
+                    height: 100%;
+                    background-color: darkred;
+                    position: relative;
 
-                    a {
-                        .lamina {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                            background-color: transparent;
-                            z-index: 3;
-                            transition: background-color 0.3s ease;
-                        }
-
-                        .lamina:hover {
-                            background-color: rgba(0, 0, 0, 0.5);
-                            cursor: pointer;
-                        }
+                    .filtro {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 3;
+                        background-color: transparent;
                     }
 
-                    .portada {
+                    .filtro:hover {
+                        background-color: rgba(255, 0, 0, 0.2);
+                    }
+
+                    .imagen {
                         width: 100%;
-                        height: 90%;
+                        height: 85%;
 
                         img {
-                            width: 10%;
-                            height: 10%;
+                            width: 100%;
+                            height: 100%;
                             object-fit: cover;
                         }
                     }
 
                     .titulo {
-                        text-transform: initial;
                         width: 100%;
-                        height: 10%;
+                        height: 15%;
+                        overflow: hidden;
                         display: flex;
-                        flex-direction: column;
                         align-items: center;
                         justify-content: center;
+
+                        h3 {
+                            text-transform: capitalize;
+                            font-weight: 100;
+                            font-size: 1rem;
+                            white-space: wrap;
+                        }
                     }
+                }
+
+                .parteIzquierda:hover {
+                    animation: parteIzquierda 1s forwards;
+                }
+
+                .parteDerecha {
+                    display: none;
+                    background-color: white;
+                }
+
+                .parteDerecha:hover {
+                    animation: parteDerecha 1s forwards;
                 }
             }
 
             .novels:hover {
-                animation: novelsAnimation 1.5s forwards;
+                animation: novelsAnimation 1s forwards;
             }
         }
     }
+}
+
+li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    right: 5%;
+    background-color: white;
+    width: 10%;
+    height: 70dvh;
 }
 
 footer {

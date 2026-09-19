@@ -1,0 +1,145 @@
+<div class="contenedorFilasDeNovelas">
+            <div class="novels-container">
+                <div class="novels">
+                    <div class="contenido">
+                        <a href="/novels/greed-all-for-what.html"><div class="lamina"></div></a>
+                        <div class="portada">
+                            <img src="./images/greed-all-for-what.jpg" alt="greed-all-for-what">
+                        </div>
+                        <div class="titulo">
+                            <p>Greed All For what</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="novels">
+                    <div class="lamina"></div>
+                    <div class="portada">
+                        <img src="./images/birth-of-the-demonic-sword.jpg" alt="greed-all-for-what">
+                    </div>
+                    <div class="titulo">
+                        <p>Greed All For what</p>
+                    </div>
+                </div>
+                <div class="novels">
+                    <div class="lamina"></div>
+                    <div class="portada">
+                        <img src="./images/follow-the-path-of-dao-from-infancy.jpg" alt="greed-all-for-what">
+                    </div>
+                    <div class="titulo">
+                        <p>Greed All For what</p>
+                    </div>
+                </div>
+                <div class="novels">
+                    <div class="lamina"></div>
+                    <div class="portada">
+                        <img src="./images/lightning-is-the-only-way.jpg" alt="greed-all-for-what">
+                    </div>
+                    <div class="titulo">
+                        <p>Greed All For what</p>
+                    </div>
+                </div>
+                <div class="novels">
+                    <div class="lamina"></div>
+                    <div class="portada">
+                        <img src="./images/lord-of-the-truth.jpg" alt="greed-all-for-what">
+                    </div>
+                    <div class="titulo">
+                        <p>Greed All For what</p>
+                    </div>
+                </div>
+                <div class="novels">
+                    <div class="lamina"></div>
+                    <div class="portada">
+                        <img src="./images/supreme-magus.jpg" alt="greed-all-for-what">
+                    </div>
+                    <div class="titulo">
+                        <p>Greed All For what</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="novels-container">
+                <div class="novels"></div>
+                <div class="novels"></div>
+                <div class="novels"></div>
+                <div class="novels"></div>
+                <div class="novels"></div>
+                <div class="novels"></div>
+            </div>
+        </div>
+
+        .contenedorFilasDeNovelas {
+                    display: flex;
+                    flex-direction: column;
+                    height: 90%;
+                    width: 100%;
+                    gap: 1rem;
+                    background-color: white;
+                }
+
+                .novels-container {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    height: 50%;
+                    gap: 1rem;
+
+                    /*contenedor de la novela como tal*/
+                    .novels {
+                        background: darkgray;
+                        flex: 1;
+
+                        /*lo que agrupa tanto el titulo como la portada*/
+                        .contenido {
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+
+                            a {
+                                .lamina {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    background-color: transparent;
+                                    z-index: 3;
+                                    transition: background-color 0.3s ease;
+                                }
+
+                                .lamina:hover {
+                                    background-color: rgba(0, 0, 0, 0.5);
+                                    cursor: pointer;
+                                }
+                            }
+
+                            .portada {
+                                width: 100%;
+                                height: 90%;
+
+                                img {
+                                    width: 10%;
+                                    height: 10%;
+                                    object-fit: cover;
+                                }
+                            }
+
+                            .titulo {
+                                text-transform: initial;
+                                width: 100%;
+                                height: 10%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+
+                    .novels:hover {
+                        animation: novelsAnimation 1.5s forwards;
+                    }
+                }
+            }

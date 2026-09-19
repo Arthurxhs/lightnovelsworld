@@ -6,8 +6,153 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <Link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>Aqui ira la primera novela xd</h1>
+<header>
+    <h1>LNW</h1>
+    <search>
+        <!--aqui digamos el action y method es para el tipo de peticion que se hace, seria /buscar?novel=dragon, novel es el nombre de la variable que viajara-->
+        <form action="/buscar" method="get">
+            <!--Los label nunca son opcionales ya que dicen que trata el input -->
+            <label for="buscador">Buscar capitulo o personaje</label>
+            <input type="search"
+                   name="novel"
+                   id="buscador"
+                   placeholder="Buscar capitulo o personaje">
+            <button type="submit">Buscar</button>
+        </form>
+    </search>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="/generos.html">Generos</a></li>
+            <li><a href="/rank.html">Ranking</a></li>
+            <li><a href="/imagenes.html">Imagenes</a></li>
+            <li><a href="/login.html">Iniciar Sesion</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <aside>
+        <h5>numero de capitulo now</h5>
+    </aside>
+    <section>
+        <h2>Titulo de la novela</h2>
+        <h3>autor</h3>
+        <h3>fecha de creacion novela</h3>
+        <h3>lectores activos</h3>
+        <h3>calificacion</h3>
+
+        <h4>cantidad de capitulos</h4>
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consectetur, dolore doloremque facilis labore necessitatibus porro soluta? Accusamus eum ex perspiciatis vel? Aliquam earum eum minus numquam placeat provident quaerat.</span><span>Dolore enim et explicabo ipsam laudantium natus praesentium, quaerat rem similique voluptatum. Delectus dignissimos iste magni odio, officiis praesentium quasi sed suscipit. Ab accusamus neque voluptate. Cumque numquam soluta ullam.</span><span>A ab aliquam autem commodi deleniti ea eius, est facere incidunt maxime provident quidem sunt voluptatibus. Cum dignissimos esse porro quas, quisquam voluptatibus. Consectetur consequatur dicta facere iure mollitia vitae.</span><span>Amet at cupiditate dolores dolorum ducimus, et eveniet exercitationem perferendis reprehenderit voluptatem. A eum, facere id illum ipsum iste iusto molestias quam tenetur voluptas! In possimus quia quibusdam sequi tenetur.</span><span>Asperiores minima repellat repellendus rerum sed soluta tenetur vel vitae! A adipisci aliquam, asperiores dicta dolorum, ea exercitationem facere illo ipsa iste iusto optio sapiente temporibus vel vero, vitae voluptate?</span><span>Ab accusamus atque consectetur culpa, ea error est ex explicabo iste itaque maxime modi neque nobis officiis possimus praesentium quae quam quis quod recusandae repudiandae rerum suscipit tempora totam vitae.</span><span>Ad aliquid atque cum delectus doloribus earum eligendi error et fugiat id iusto labore laudantium nam nulla omnis pariatur, perspiciatis rerum sed sit tempora? Delectus impedit possimus sapiente vel voluptates.</span><span>Aperiam architecto assumenda beatae cum, dolor id ipsam iure laboriosam nemo non nulla pariatur perferendis porro quod sit! Aliquam culpa deleniti dicta dolor eaque ex optio quasi quibusdam soluta veniam.</span><span>Ad asperiores, assumenda cum et eum expedita hic ipsam iste nam optio praesentium quisquam repellendus sequi veritatis vero? Accusamus ad cum delectus deleniti deserunt distinctio ipsam odit ratione rem saepe.</span><span>Asperiores corporis delectus doloribus, eaque id illum impedit, itaque magni nihil nostrum numquam recusandae reiciendis reprehenderit, similique tempora vel voluptatem? Iure, pariatur quibusdam? Aut deserunt ea et explicabo fuga laudantium.</span></p>
+    </section>
+    <section>
+        <h2>Lista de capitulos</h2>
+        <ul>
+            <li>Lorem ipsum dolor.</li>
+            <li>Laboriosam, sequi, temporibus.</li>
+            <li>Atque, quia, repellendus.</li>
+            <li>Culpa, illo vel?</li>
+            <li>Dolore placeat, soluta?</li>
+            <li>Hic, non qui!</li>
+            <li>Ad, explicabo omnis?</li>
+            <li>Enim laboriosam, quis?</li>
+            <li>Perferendis repellendus, temporibus?</li>
+            <li>Consequuntur, hic, maxime?</li>
+            <li>Alias incidunt, laboriosam!</li>
+            <li>Et, magni, omnis.</li>
+            <li>Ad, adipisci aliquam!</li>
+            <li>Culpa dolorum, rerum!</li>
+            <li>Alias, natus, reiciendis!</li>
+            <li>Aliquid, illum, possimus.</li>
+            <li>Eum nam, rem?</li>
+            <li>Doloremque, doloribus laudantium.</li>
+            <li>A, doloribus impedit!</li>
+            <li>Fuga, minus, odit.</li>
+            <li>Eius, sint sit.</li>
+            <li>Eaque quaerat, rerum.</li>
+            <li>Expedita, nostrum sunt?</li>
+            <li>Id, quam quis!</li>
+            <li>Laborum, maiores, nesciunt?</li>
+            <li>Autem, facere, odio.</li>
+            <li>Asperiores, mollitia, ullam!</li>
+            <li>Nemo, obcaecati, placeat.</li>
+            <li>Inventore, odit, saepe?</li>
+            <li>Perferendis, placeat vero.</li>
+            <li>Culpa, doloribus necessitatibus?</li>
+            <li>Deleniti, nulla, odit!</li>
+            <li>Amet, excepturi, voluptatibus?</li>
+            <li>Deserunt nostrum, reiciendis.</li>
+            <li>Possimus, quos, tempora.</li>
+            <li>Ab, cum exercitationem.</li>
+            <li>Dolore, iure, suscipit?</li>
+            <li>Est, expedita, provident.</li>
+            <li>Natus, unde voluptates!</li>
+            <li>Deserunt, nisi, unde!</li>
+            <li>Culpa possimus, voluptate.</li>
+            <li>Eveniet mollitia, quis!</li>
+            <li>Eius sequi, vel.</li>
+            <li>Autem, dicta, est.</li>
+            <li>Beatae, ipsa rem.</li>
+            <li>Autem, labore nostrum!</li>
+            <li>Facilis ratione, similique.</li>
+            <li>Enim itaque, mollitia.</li>
+            <li>Architecto, atque, ex!</li>
+            <li>Deleniti, dolorum voluptatum.</li>
+            <li>Consequuntur eos, quisquam.</li>
+            <li>Excepturi, soluta, voluptatem?</li>
+            <li>In, ipsam, vitae?</li>
+            <li>Architecto, aspernatur eum!</li>
+            <li>Quo repellat, tempore?</li>
+            <li>Architecto, libero, rerum.</li>
+            <li>Provident, recusandae, sunt.</li>
+            <li>Dignissimos, eum, quos.</li>
+            <li>Magni, nam sunt!</li>
+            <li>Blanditiis, nihil, quae?</li>
+            <li>Esse, eveniet recusandae!</li>
+            <li>Eaque, enim, itaque.</li>
+            <li>Earum, obcaecati repellat.</li>
+            <li>Consectetur, sed, unde.</li>
+            <li>Accusantium, explicabo molestias!</li>
+            <li>Illo, reiciendis, repudiandae.</li>
+            <li>Ipsa, obcaecati, similique!</li>
+            <li>Eligendi, incidunt minima?</li>
+            <li>Eum, eveniet, nulla?</li>
+            <li>Culpa, id vero!</li>
+            <li>Quis, reiciendis sed?</li>
+            <li>A, animi, rem.</li>
+            <li>Animi, omnis, totam!</li>
+            <li>Iure laborum, velit.</li>
+            <li>Doloribus facilis, perspiciatis?</li>
+            <li>Blanditiis, qui voluptates?</li>
+            <li>In, odio quasi.</li>
+            <li>Dolores quisquam, repudiandae.</li>
+            <li>Exercitationem, incidunt, voluptatem.</li>
+            <li>Eveniet praesentium, veritatis.</li>
+            <li>Aut nulla, vel.</li>
+            <li>Tempora, tenetur, voluptas.</li>
+            <li>A, et, omnis.</li>
+            <li>Aliquid doloremque, quaerat.</li>
+            <li>Dicta, quod, recusandae.</li>
+            <li>Animi, mollitia vero?</li>
+            <li>Aut distinctio, magni!</li>
+            <li>Impedit, sint, voluptate!</li>
+            <li>Ab in, quo.</li>
+            <li>Cumque, officia recusandae?</li>
+            <li>Cupiditate, maxime, quam.</li>
+            <li>Adipisci cupiditate, mollitia.</li>
+            <li>Quas, similique, voluptate!</li>
+            <li>Atque, minima, saepe.</li>
+            <li>Nulla, praesentium, ut?</li>
+            <li>Id porro, voluptatem?</li>
+            <li>Eos necessitatibus, reprehenderit.</li>
+            <li>Accusantium, deserunt, quo?</li>
+            <li>Atque, commodi, voluptates.</li>
+            <li>Autem, eius magnam.</li>
+        </ul>
+    </section>
+</main>
+<footer></footer>
 </body>
 </html>
